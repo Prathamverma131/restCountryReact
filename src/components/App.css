@@ -1,0 +1,5 @@
+.darkWrapper {
+  background: black;
+  color: aliceblue;
+  transition: background 2s, color 3s;
+}
