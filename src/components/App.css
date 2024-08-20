@@ -3,3 +3,8 @@
   color: aliceblue;
   transition: background 2s, color 3s;
 }
+
+.loader {
+  font-size: xx-large;
+  text-align: center;
+}

@@ -14,6 +14,7 @@ function App() {
   let [searchCountry, setSearchCountry] = useState("");
   let [region, setRegion] = useState("");
   let [darkMode, setDarkMode] = useState(false);
+  let [loader, setLoder] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -26,6 +27,8 @@ function App() {
         console.log("APi call failed");
         setCountriesData([]);
         setFilteredData([]);
+      } finally {
+        setLoder(false);
       }
     }
 
@@ -56,8 +59,14 @@ function App() {
           searchCountry={searchCountry}
           setSearchCountry={setSearchCountry}
         />
-        <Filter region={region} setRegion={setRegion} />
-        <Cards cardsData={filteredData} />
+        {loader ? (
+          <div className="loader">Loading data...</div>
+        ) : (
+          <>
+            <Filter region={region} setRegion={setRegion} />
+            <Cards cardsData={filteredData} />
+          </>
+        )}
       </div>
     </Context.Provider>
   );
