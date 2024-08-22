@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./navbar.module.css";
 import { useContext } from "react";
-import { Context } from "../App";
+import { Context } from "../Home";
 
 function Navbar() {
   const [darkMode, setDarkMode] = useContext(Context);

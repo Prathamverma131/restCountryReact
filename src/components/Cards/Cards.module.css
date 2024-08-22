@@ -4,6 +4,11 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  cursor: pointer;
+}
+
+.cardContainer:hover {
+  transform: scale(1.01);
 }
 
 .imgContainer {

@@ -1,0 +1,71 @@
+.btnCon {
+  padding: 1rem 2rem;
+  font-size: xx-large;
+}
+
+.container {
+  padding: 1rem;
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imgContainer {
+  width: 500px;
+  min-height: 400px;
+}
+
+.bodyContainer {
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 0;
+  align-items: center;
+  gap: 1rem;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+span {
+  font-weight: 700;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.2rem 1rem;
+}
