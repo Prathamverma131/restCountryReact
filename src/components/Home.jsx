@@ -10,7 +10,7 @@ export const Context = React.createContext();
 
 function Home() {
   let [countriesData, setCountriesData] = useState([]);
-  let [filteredData, setFilteredData] = useState([]);
+  let filteredData = [];
   let [searchCountry, setSearchCountry] = useState("");
   let [region, setRegion] = useState("");
   let [darkMode, setDarkMode] = useState(false);
@@ -43,7 +43,7 @@ function Home() {
         let apiData = await fetch("https://restcountries.com/v3.1/all");
         let jsonData = await apiData.json();
         setCountriesData([...jsonData]);
-        setFilteredData([...jsonData]);
+        filteredData = [...jsonData];
         mapRegionWithSubregion(jsonData);
       } catch (e) {
         console.log("APi call failed");
@@ -127,7 +127,7 @@ function Home() {
       }
     }
 
-    setFilteredData([...filterCountry]);
+    filteredData = [...filterCountry];
   }, [searchCountry, region, subRegion, order]);
 
   return (
